@@ -1,15 +1,31 @@
-  'use stict mode'
+  
 let fTime = parseInt($('.focus-time .minutes').text());
-let pTime = $('.focus-time .minutes').text();
+let pTime = parseInt($('.pause-time .minutes').text());
+let timer;
 
-const timer = new Timer(fTime, pTime);
 
 
 // ========================= UI Contoll =======================================
 
 $('.focus-time .increment').on('click',() => {
-  fTime++;
+  fTime += 5;
+  timer = new Timer(fTime, pTime);
   $('.focus-time .minutes').text(fTime);
+});
+
+$('.focus-time .decrement').on('click',() => {
+  fTime -= 5;
+  $('.focus-time .minutes').text(fTime);
+});
+
+$('.pause-time .increment').on('click',() => {
+  pTime += 5;
+  $('.pause-time .minutes').text(fTime);
+});
+
+$('.pause-time .decrement').on('click',() => {
+  pTime -= 5;
+  $('.pause-time .minutes').text(fTime);
 });
 
 
