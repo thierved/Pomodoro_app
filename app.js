@@ -1,20 +1,22 @@
 
-let fTime = parseInt($('.focus-time .minutes').text());
-let pTime = parseInt($('.pause-time .minutes').text());
 let timer;
-
-
 
 // ========================= UI Contoll =======================================
 
 $('.increment').on('click',function() {
-
   $(this).parent().find('.minutes')
-         .text(parseInt($(this).parent().find('.minutes').text()) + 5);
-
-
-  timer = new Timer(pTime, fTime);
+         .text(parseInt($(this).parent().find('.minutes').text()) + 1);
+  timer = new Timer(parseInt($('.focus-time .minutes').text()),
+                    parseInt($('.pause-time .minutes').text()));
 });
+
+$('.decrement').on('click',function() {
+  $(this).parent().find('.minutes')
+         .text(parseInt($(this).parent().find('.minutes').text()) - 1);
+  timer = new Timer(parseInt($('.focus-time .minutes').text()),
+                    parseInt($('.pause-time .minutes').text()));
+});
+
 
 $('#start').on('click',() => {
   timer.startTimer();
