@@ -25,6 +25,7 @@ $('#pause').on('click',() => {
   timer.pauseTimer();
   $('#resume').on('click',() => {
     timer.resumeTimer();
+    $('#resume').off();
   });
 });
 
