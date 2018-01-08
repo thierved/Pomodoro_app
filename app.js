@@ -1,21 +1,19 @@
 
 let timer;
-
 // ========================= UI Contoll =======================================
 
 $('.increment').on('click',function() {
   $(this).parent().find('.minutes')
-         .text(parseInt($(this).parent().find('.minutes').text()) + 1);
-  timer = new Timer(parseInt($('.focus-time .minutes').text()),
-                    parseInt($('.pause-time .minutes').text()));
+         .text(formateIt(parseInt($(this).parent().find('.minutes').text()) + 1));
 });
 
 $('.decrement').on('click',function() {
   $(this).parent().find('.minutes')
-         .text(parseInt($(this).parent().find('.minutes').text()) - 1);
-  timer = new Timer(parseInt($('.focus-time .minutes').text()),
-                    parseInt($('.pause-time .minutes').text()));
+         .text(formateIt(parseInt($(this).parent().find('.minutes').text()) - 1));
 });
+
+timer = new Timer(parseInt($('.focus-time .minutes').text()),
+                  parseInt($('.pause-time .minutes').text()));
 
 
 $('#start').on('click',() => {
@@ -38,7 +36,7 @@ $('#stop').on('click',() => {
 
 // =============================================================================
 
-function Timer(duration, pauseTime) {
+function Timer(duration = 25, pauseTime = 5) {
   let timerDuration = duration*60;
   let minutes;
   let seconds;
@@ -47,6 +45,7 @@ function Timer(duration, pauseTime) {
   let timerEnded = false;
 
   this.startTimer =() => {
+    clearInterval(timerTicker);
     timerDuration = duration*60;
     timerTicker = setInterval(tick,1000);
     tick();
@@ -57,6 +56,7 @@ function Timer(duration, pauseTime) {
   }
 
   this.resumeTimer = () => {
+    clearInterval(timerTicker);
     timerTicker = setInterval(tick,1000);
     tick();
   }
@@ -91,10 +91,17 @@ function Timer(duration, pauseTime) {
       display.text(timeFormater(minutes) + ":" + timeFormater(seconds));
   }
 
-  // ========================== HEILPER FUNCTIONS ==============================
+
+}
+
+
+// ========================== HEILPER FUNCTIONS ==============================
 
   function timeFormater(min) {
       min = min < 10 ? "0" + min : min;
       return min;
   }
-}
+
+  function formateIt(num) {
+    return num > 0 ? num : 0;
+  }
