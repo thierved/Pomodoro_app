@@ -7,15 +7,14 @@ let timer;
 
 // ========================= UI Contoll =======================================
 
-$('.increment').on('click',() => {
-  pTime++
-  fTime++
-  console.log(pTime, fTime);
+$('.increment').on('click',function() {
+
+  $(this).parent().find('.minutes')
+         .text(parseInt($(this).parent().find('.minutes').text()) + 5);
+
+
   timer = new Timer(pTime, fTime);
 });
-
-
-timer = new Timer(pTime, fTime);
 
 $('#start').on('click',() => {
   timer.startTimer();
