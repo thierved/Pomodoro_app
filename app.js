@@ -12,11 +12,9 @@ $('.decrement').on('click',function() {
          .text(formateIt(parseInt($(this).parent().find('.minutes').text()) - 1));
 });
 
-timer = new Timer(parseInt($('.focus-time .minutes').text()),
-                  parseInt($('.pause-time .minutes').text()));
-
-
 $('#start').on('click',() => {
+  timer = new Timer(parseInt($('.focus-time .minutes').text()),
+                    parseInt($('.pause-time .minutes').text()));
   timer.startTimer();
   $('.start-up-screen').addClass('disabled');
 });

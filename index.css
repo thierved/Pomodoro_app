@@ -41,7 +41,7 @@ body {
 }
 
 .start-up-screen {
-  height: 400px;
+  height: 450px;
 }
 
 .start-up-screen h3 {
@@ -81,24 +81,12 @@ body {
   width: 50%;
 }
 
-#start {
-  width: 50%;
-  height: 40px;
-  display: block;
-  margin:  1.5rem auto;
-  background: #708090;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 0.7rem;
-  box-shadow: rgba(255, 255, 255, 0.25) 0 0 0 0.1rem;
-}
-
 .mode h3 {
   font-size: 1.8rem;
   padding: 10px 0;
   background-color: #228B22;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .timer {
@@ -118,18 +106,31 @@ body {
   height: 100px;
 }
 
-.btn {
+#start, .btn {
   display: block;
-  margin:7px 1%;
-  padding: 10px 0;
-  width: 31.3%;
   background:	#708090;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
-  float: left;
-  box-shadow: rgba(255, 255, 255, 0.25) 0 0 0 0.1rem;
   cursor: pointer;
-  border-radius: 0.5rem;
+  border: none;
+  border-radius: 0.7rem;
+  box-shadow: rgba(255, 255, 255, 0.25) 0 0 0 0.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#start {
+  width: 50%;
+  height: 40px;
+  margin:  3rem auto;
+  background: #708090;
+}
+
+.btn {
+  margin:7px 1%;
+  padding: 10px 0;
+  width: 31.3%;
+  float: left;
 }
 
 .btn#stop {
