@@ -41,7 +41,8 @@ body {
 }
 
 .start-up-screen {
-  height: 450px;
+  height: 400px;
+  margin: 25px 0;
 }
 
 .start-up-screen h3 {
