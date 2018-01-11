@@ -3,7 +3,7 @@
   color: #F5F5F5;
 }
 
-h3, span { font-size: 16px; margin: 0; padding: 0; font-family: 'Open Sans', sans-serif;  color: #F5F5F5;}
+h3, span { font-size: 16px; margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; color: rgba(255, 255, 255, 0.7.5);}
 
 body {
   background-color: #414a52;
@@ -18,13 +18,13 @@ body {
   max-width: 400px;
   height: 500px;
   margin: auto;
-  background-color: rgb(105,105,105);
+  background-color:	#292421;
 }
 
 .container {
   height: 525px;
   margin-top: 3rem;
-  border-radius: 0.8rem;
+  border-radius: 48px;
   box-shadow: rgba(255, 255, 255, 0.25) 0 0 0 0.5rem;
 }
 
@@ -64,13 +64,15 @@ body {
   text-align: center;
   font-size: 2.7rem;
   font-weight: bold;
-  color: #F5F5F5;
+  color: rgba(255, 255, 255, 0.7);
   padding: 10px;
 }
 
 .increment, .decrement {
   width: 25%;
-  background-color: rgba(142, 130, 109, 0.7);
+  border-radius: 48px;
+  box-shadow: rgba(255, 255, 255, 0.25) 0 0 0 0.08rem;
+  background-color: rgba(182, 125, 0, 0.7);
 }
 
 .increment:hover, .decrement:hover {
@@ -85,7 +87,7 @@ body {
 .mode h3 {
   font-size: 1.8rem;
   padding: 10px 0;
-  background-color: #228B22;
+  background-color: #71C671;
   text-align: center;
   text-transform: uppercase;
 }
@@ -109,22 +111,23 @@ body {
 
 #start, .btn {
   display: block;
-  background:	#708090;
+  background:	#8B4500;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   cursor: pointer;
   border: none;
-  border-radius: 0.7rem;
-  box-shadow: rgba(255, 255, 255, 0.25) 0 0 0 0.1rem;
+  border-radius: 48px;
+  box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 0.1rem;
   text-transform: uppercase;
   font-weight: bold;
+  color: rgba(255, 255, 255, 0.6);
+  outline-style: none;
 }
 
 #start {
   width: 50%;
   height: 40px;
   margin:  3rem auto;
-  background: #708090;
 }
 
 .btn {
@@ -136,4 +139,18 @@ body {
 
 .btn#stop {
   margin-top: 65px;
+}
+
+/**************************** animations***************************************/
+
+@@keyframes slideDown {
+  0% {
+
+  }
+  50% {
+
+  }
+  100% {
+
+  }
 }

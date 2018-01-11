@@ -27,7 +27,6 @@ $('#pause').on('click',() => {
   });
 });
 
-
 $('#stop').on('click',() => {
   timer.stopTimer();
   $('.start-up-screen').removeClass('disabled');
@@ -74,7 +73,7 @@ function Timer(duration = 25, pauseTime = 5) {
           timerDuration--;
         if (timerDuration === -1) {
           timerDuration = pauseTime*60;
-          $('.mode h3').css('background-color','red');
+          $('.mode h3').css('background-color','rgba(233, 99, 44, 0.7)');
           $('.mode h3').text('pause time');
           setInterval(() => {
             timerEnded = true
@@ -89,8 +88,6 @@ function Timer(duration = 25, pauseTime = 5) {
       }
       display.text(timeFormater(minutes) + ":" + timeFormater(seconds));
   }
-
-
 }
 
 
