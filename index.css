@@ -26,6 +26,7 @@ body {
   margin-top: 3rem;
   border-radius: 48px;
   box-shadow: rgba(255, 255, 255, 0.25) 0 0 0 0.5rem;
+  animation: slide-down 0.5s;
 }
 
 .title {
@@ -77,6 +78,7 @@ body {
 
 .increment:hover, .decrement:hover {
   cursor: pointer;
+  transition: background-color 0.5s;
   background-color: rgba(182, 125, 0, 0.5);
 }
 
@@ -126,6 +128,7 @@ body {
 
 #start:hover, .btn:hover {
   background-color: rgba(135, 69, 0, 0.7);
+  transition: background-color 0.5s;
 }
 
 #start {
@@ -147,14 +150,11 @@ body {
 
 /**************************** animations***************************************/
 
-@@keyframes slideDown {
+@keyframes slide-down {
   0% {
-
-  }
-  50% {
-
+    transform: translate(100%);
   }
   100% {
-
+    transform: translate(0%);
   }
 }

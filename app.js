@@ -13,9 +13,11 @@ $('.decrement').on('click',function() {
 });
 
 $('#start').on('click',() => {
+  $('.container').css('animation','show-up 1s');
   timer = new Timer(parseInt($('.focus-time .minutes').text()),
                     parseInt($('.pause-time .minutes').text()));
   timer.startTimer();
+
   $('.start-up-screen').addClass('disabled');
 });
 
